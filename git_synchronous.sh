@@ -14,7 +14,7 @@ github_path="https://github.com/jerryrjiang/tp5.git"
 cd $tp_path
 git add ./*
 git commit -m "$ci_time"
-if [ $? != 0 ]
+if [ $? != "0" ]
 then
 	echo "aaaaaaaa"
 fi
