@@ -12,7 +12,7 @@ tp_path="/var/www/html/tp5"
 ci_time=`date +%Y%m%d`
 github_path="https://github.com/jerryrjiang/tp5.git"
 cd $tp_path
-git add ./*  
+git add --all ./*  
 git commit -m "$ci_time" 
 if [ $?!=0 ]
 then
