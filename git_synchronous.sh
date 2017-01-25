@@ -16,7 +16,11 @@ git add ./*
 git commit -m "$ci_time" 
 if [ $?!=0 ]
 then
-	exit 2>&1
+	exit
 fi
 git remote add origin $github_path
+if [ $?!=0 ]
+then
+	exit
+fi
 git push -u origin master
