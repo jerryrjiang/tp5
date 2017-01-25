@@ -14,9 +14,9 @@ github_path="https://github.com/jerryrjiang/tp5.git"
 cd $tp_path
 git add ./*
 git commit -m "$ci_time"
-if [ $?==1 ]
+if [ $?!=0 ]
 then
-	echo "aaaaaaaa"
+	exit
 fi
 git remote add origin $github_path
 git push -u origin master
