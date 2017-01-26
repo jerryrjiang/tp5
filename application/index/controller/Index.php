@@ -3,13 +3,9 @@ namespace app\index\controller;
 
 class Index 
 {
-    public function index()
+    public function hello()
     {
-        return 'index';
-    }
-
-    public function hello($name = 'World')
-    {
-        return 'Hello,' . $name . '!';
+        $data = ['name' => 'thinkphp', 'status' => '1'];
+        return json($data);
     }
 }
