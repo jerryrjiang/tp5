@@ -236,4 +236,6 @@ return [
         'var_page'  => 'page',
         'list_rows' => 15,
     ],
+    //web_root路径
+    "web_root"   => "/static/",
 ];

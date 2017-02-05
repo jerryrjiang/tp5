@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- bootstrap设置 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+	<link href="http://cdn.bootcss.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    $(function () {
+		  $("#submit").click(function(){
+			  var loginForm = document.createElement("form");
+			  document.body.appendChild(loginForm);
+			  loginForm.method = 'post';
+			  loginForm.action = 'http://121.43.113.151/index/login/login';
+			  
+			  var username = document.getElementById("username").value;
+			  var password = document.getElementById("password").value;
+			 
+			  var usernameElement = document.createElement("input");
+			  usernameElement.setAttribute("name","username");
+			  usernameElement.setAttribute("type","hidden");
+			  usernameElement.setAttribute("value",username);
+			  loginForm.appendChild(usernameElement);
+			  
+			  var passwordElement = document.createElement("input");
+			  passwordElement.setAttribute("name","password");
+			  passwordElement.setAttribute("type","hidden");
+			  passwordElement.setAttribute("value",password);
+			  loginForm.appendChild(passwordElement);
+			  
+			  loginForm.submit();
+		  });
+	   });
+    </script>
+    <title>远景能源测试管理平台</title>
+</head>
+<body style="background-color:black;">
+<div class="container-fluid" >
+	<div class="row">
+		<div class="col-lg-3"></div>
+		<div class="col-lg-6" style="font-size:400%;text-align:center;vertical-align:middle;color:white;">远景能源测试管理平台</div>
+		<div class="col-lg-2">
+			<div class="row">
+				<div class="col-lg-4" style="padding-left:0px;margin-top:7%">
+					<button class="btn btn-sm" data-toggle="modal" data-target="#myModal" style="width:100%;text-align:center;vertical-align:middle;background-color:transparent;border-style:1px solid;border-color:white;border-radius:0px;color:white;">
+						登陆
+					</button>
+				</div>
+				<div class="col-lg-4" style="padding-left:0px;margin-top:7%">
+					<button class="btn btn-sm" data-toggle="modal" data-target="#myModal" style="width:100%;text-align:center;vertical-align:middle;background-color:transparent;border-style:1px solid;border-color:white;border-radius:0px;color:white;">
+						注册
+					</button>
+				</div>
+				<div class="col-lg-4" style="padding-left:0px;margin-top:7%">
+					<button class="btn btn-sm" data-toggle="modal" data-target="#myModal" style="width:100%;text-align:center;vertical-align:middle;background-color:transparent;border-style:1px solid;border-color:white;border-radius:0px;color:white;">
+						管理员登陆
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-1"></div>
+	</div>
+</div>
+		<!-- 模态框（Modal） -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		    <div class="modal-dialog" style="width:23%;">
+		        <div class="modal-content">
+		            <div class="modal-header" style="text-align:center;vertical-align:middle;">
+		                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		                <h2 class="modal-title" id="myModalLabel">普通登陆</h2>
+		            </div>
+			        <div class="modal-body" style="text-align:center;vertical-align:middle;">
+				        <div class="input-group">
+					        <span class="input-group-addon"><i class="icon-user-md"></i></span>
+					        <input type="text" class="form-control" placeholder="账号" id="username">
+		       			</div>
+		       			<br>
+		       			<div class="input-group">
+					        <span class="input-group-addon"><i class="icon-key"></i></span>
+					        <input type="password" class="form-control" placeholder="密码" id="password">
+		       			</div>
+		       		</div>
+			        <div class="modal-footer" style="text-align:center;">
+			            <button id="submit" type="button" class="btn btn-primary"  style="width:100%;border-radius:0px;">点击登陆</button>
+			        </div>
+		        </div><!-- /.modal-content -->
+		    </div><!-- /.modal -->
+		</div>
+    <script src="{$js_path}/three.min.js"></script>
+    <script src="{$js_path}/login_animate.js"></script>
+    <script>        //@remwks
+        var SCREEN_WIDTH = window.innerWidth,
+				SCREEN_HEIGHT = window.innerHeight/1.2,
+			r = 200,
+			mouseX = 0, mouseY = 0,
+			windowHalfX = window.innerWidth / 2,
+			windowHalfY = window.innerHeight / 2,
+			camera, scene, renderer;
+        init();
+        animate();
+        //@ sourceURL=pen.js
+    </script>
+</body>
+</html>
+

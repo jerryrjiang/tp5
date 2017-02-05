@@ -19,6 +19,7 @@ return [
     ],
     'user/index'      => 'index/user/index',
     'user/create'     => 'index/user/create',
+    'login/index'     => 'index/login/index',
     'user/add'        => 'index/user/add',
     'user/add_list'   => 'index/user/addList',
     'user/update/:id' => 'index/user/update',
